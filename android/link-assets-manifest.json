@@ -72,6 +72,26 @@
     {
       "path": "src/assets/fonts/Montserrat-ThinItalic.ttf",
       "sha1": "04f69417392da5f6f831fd89e6ff5698323fdecb"
+    },
+    {
+      "path": "src/assets/fonts/Roboto-Black.ttf",
+      "sha1": "d1678489a8d5645f16486ec52d77b651ff0bf327"
+    },
+    {
+      "path": "src/assets/fonts/Roboto-Bold.ttf",
+      "sha1": "508c35dee818addce6cc6d1fb6e42f039da5a7cf"
+    },
+    {
+      "path": "src/assets/fonts/Roboto-Medium.ttf",
+      "sha1": "fa5192203f85ddb667579e1bdf26f12098bb873b"
+    },
+    {
+      "path": "src/assets/fonts/Roboto-Regular.ttf",
+      "sha1": "3bff51436aa7eb995d84cfc592cc63e1316bb400"
+    },
+    {
+      "path": "src/assets/fonts/Roboto_Condensed-Light.ttf",
+      "sha1": "1daf12253cbd45c84a4f3b04d2ccea83d40446cb"
     }
   ]
 }

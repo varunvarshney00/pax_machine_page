@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Image, Text } from 'react-native';
-import { TextInput, } from 'react-native-paper';
-
-
+import { View, Image, Text, Keyboard, } from 'react-native';
+import { TextInput } from 'react-native-paper';
+import { styles } from './styles';
 
 interface CustomInputProps {
   label?: string;
@@ -12,7 +11,10 @@ interface CustomInputProps {
   secureTextEntry?: boolean;
   icon1?: any;
   icon2?: any;
+  icon3?: any;
   error?: boolean;
+  onPressIcon?: () => void; 
+  keyboardType?:string;
 }
 
 const CustomInput: React.FC<CustomInputProps> = ({
@@ -21,42 +23,59 @@ const CustomInput: React.FC<CustomInputProps> = ({
   onChangeText,
   icon1,
   icon2,
+  icon3,
   placeholder,
   secureTextEntry,
+  onPressIcon,
+  keyboardType,
   error = false,
 }) => {
   const [showPassword, setShowPassword] = useState(secureTextEntry);
   const [isFocused, setIsFocused] = useState(false);
 
-
-
-
+ 
   const togglePasswordVisibility = () => {
+    Keyboard.dismiss();
     setShowPassword(!showPassword);
+    if (onPressIcon) {
+      onPressIcon(); 
+    }
   };
 
   const handleFocus = () => setIsFocused(true);
-  const handleBlur = () => setIsFocused(false);
+  const handleBlur = () => {
+    setIsFocused(false);
+    // Keyboard.dismiss();
+  };
 
   return (
 
     <View style={styles.inputContainer}>
       <TextInput
         mode="flat"
-        label={<Text style={[{ fontSize: isFocused ? 28 : 28, fontFamily: 'Montserrat-Light' }]}>{label}</Text>}
+        keyboardType={keyboardType}
+        label={<Text style={
+          {
+            fontSize: 14,
+            fontFamily: 'Montserrat-Medium',
+            color: error ? 'red' : '#ABB3BA',
+            
+          }}>{label}
+        </Text>}
         value={value}
-        secureTextEntry={showPassword}
+        secureTextEntry={secureTextEntry}
+
         onChangeText={onChangeText}
         onFocus={handleFocus}
         onBlur={handleBlur}
         right={
           icon2 && (
             <TextInput.Icon
-              onPress={togglePasswordVisibility}
+            onPress={togglePasswordVisibility}
               icon={() => (
                 <Image
-                  source={icon2}
-                  style={[styles.iconStyle, { tintColor: error ? 'red' : 'grey' }]}
+                  source={showPassword?icon2:icon3}
+                  style={[styles.iconStyle, { tintColor: error ? 'red' : '' }]}
                 />
               )}
             />
@@ -68,73 +87,40 @@ const CustomInput: React.FC<CustomInputProps> = ({
               icon={() => (
                 <Image
                   source={icon1}
-                  style={[styles.iconStyle, { tintColor: error ? 'red' : 'grey' }]}
+                  style={[styles.iconStyle, { tintColor: error ? 'red' : '' }]}
                 />
               )}
             />
           )
         }
         textColor="white"
-
         placeholderTextColor="white"
         underlineColor="transparent"
         activeOutlineColor="transparent"
         underlineStyle={{
-          display: "none"
+          display: 'none',
         }}
-
         theme={{
-
           colors: {
-            primary: error && isFocused ? 'red' : 'white',
-          }
+            primary: error && isFocused ? 'red' : 'grey',
+          },
         }}
+
         style={[
           styles.input,
           {
             borderColor: error ? 'red' : '#348597',
-            fontSize: isFocused ? 20 : 28
-
+            fontSize:  14,
+            fontFamily: 'Montserrat-Medium',
           },
         ]}
-
         numberOfLines={1}
         placeholder={placeholder}
-
       />
     </View>
+
   );
 };
 
-const styles = StyleSheet.create({
-  inputContainer: {
-    marginVertical: 25,
-    backgroundColor: '#01171F',
-
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginHorizontal: 30,
-
-  },
-  input: {
-    flex: 1,
-    backgroundColor: '#01152B',
-    borderRadius: 10,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    borderWidth: 1,
-    height: 90,
-    // fontSize: 28,
-    // fontFamily: 'Montserrat-Light'
-
-
-  },
-  iconStyle: {
-    width: 35,
-    height: 35,
-    resizeMode: 'contain',
-
-  }
-});
-
 export default CustomInput;
+

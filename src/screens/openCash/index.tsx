@@ -9,11 +9,8 @@ import CustomHeader from '../../global/loginHeader';
 import { styles } from './style';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwordError, setPasswordError] = useState(false);
-  const [showPassword, setShowPassword] = useState(false); 
+const OpenCash = () => {
+  const [cashAmount, setCashAmount] = useState(''); 
   const [disable, setDisable] = useState(true);
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
@@ -22,43 +19,23 @@ const Login = () => {
   const navigation = useNavigation();
 
   useEffect(() => {
-    if (email && password) {
+   
+    if (cashAmount) {
       setDisable(false);
     } else {
       setDisable(true);
     }
-  }, [email, password]);
+  }, [cashAmount]); 
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const handleLogin = () => {
-  
-    if (!/^\d+$/.test(email)) {
-      setToastMessage('User ID must be numeric');
+  const handleConfirm = () => {
+    if (!cashAmount || isNaN(cashAmount)) {
+      setToastMessage('Please enter a valid cash amount');
       setToastIcon(Icons.error);
       setToastVisible(true);
-      return;
+    } else {
+      console.log('Cash Amount:', cashAmount);
+      navigation.navigate("LoginScreen");
     }
-    if (email.startsWith('0')) {
-      setToastMessage('User ID cannot start with 0');
-      setToastIcon(Icons.error);
-      setToastVisible(true);
-      return;
-    }
-
-   
-    if (password.startsWith('0')) {
-      setToastMessage('Password cannot start with 0');
-      setToastIcon(Icons.error);
-      setToastVisible(true);
-      return;
-    }
-
-
-    console.log('Login successful!');
-    navigation.navigate("BottomTabNavigator");
 
     setTimeout(() => {
       setToastVisible(false);
@@ -82,42 +59,29 @@ const Login = () => {
             <CustomHeader />
 
             <View style={styles.textContainer}>
-              <Text style={styles.text1}>Employee Login</Text>
-              <Text style={styles.text2}>Enter User ID and password</Text>
+              <Text style={styles.text1}>Enter Cash Amount</Text>
+              <Text style={styles.text2}>Start Cash Amount in Drawer</Text>
             </View>
 
-          
+           
             <CustomInput
-              label="User ID"
-              icon1={Icons.account}
-              value={email}
-              onChangeText={setEmail}
-              keyboardType="numeric"  
+              label="Enter Cash Amount"
+              icon1={Icons.dollar}
+              value={cashAmount}
+              keyboardType="numeric" 
+              onChangeText={(text) => setCashAmount(text)} 
             />
 
-        
-            <CustomInput
-              label="Password"
-              secureTextEntry={!showPassword} 
-              icon2={Icons.eyeoff}
-              icon1={Icons.lock}
-              icon3={Icons.eye}
-              value={password}
-              keyboardType="numeric"  
-              onChangeText={setPassword}
-              error={passwordError}
-              onPressIcon={togglePasswordVisibility}  
-            />
-
+       
             <CustomButton
-              text="Login"
+              text="Confirm"
               style={{
                 marginTop: 36,
                 marginHorizontal: 24,
                 opacity: disable ? 0.8 : 1,
               }}
-              onPress={handleLogin}
-              disable={disable}
+              onPress={handleConfirm}
+              disable={disable}  
             />
 
           </KeyboardAwareScrollView>
@@ -128,4 +92,8 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default OpenCash;
+
+
+
+

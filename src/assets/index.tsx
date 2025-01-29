@@ -1,3 +1,5 @@
+
+
 const Images = {
     HeaderReloaded: require('./icons/HeaderReloaded.png'),
     Search: require('./icons/Search.png'),
@@ -11,6 +13,7 @@ const Images = {
 
     backgroundImg: require('../assets/Images/background.png'),
     img: require('../assets/Images/image1.png'),
+    splashScreen:require('../assets/Images/imagee.png'),
 };
 
 const Icons = {
@@ -20,5 +23,8 @@ const Icons = {
     account: require('./icons/account.png'),
     error: require('./icons/error.png'),
     lock: require('./icons/lock.png'),
+    splashLogo: require('./icons/splashLogo.png'),
+    sonnyLogo: require('./icons/sonnyLogo.png'),
+    dollar: require('./icons/dollar.png'),
 };
 export { Images, Icons };

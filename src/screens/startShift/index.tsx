@@ -9,7 +9,7 @@ import CustomHeader from '../../global/loginHeader';
 import { styles } from './style';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
-const Login = () => {
+const StartShift = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState(false);
@@ -58,7 +58,7 @@ const Login = () => {
 
 
     console.log('Login successful!');
-    navigation.navigate("BottomTabNavigator");
+    navigation.navigate("OpenCash");
 
     setTimeout(() => {
       setToastVisible(false);
@@ -128,4 +128,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default StartShift;
+
+
+
