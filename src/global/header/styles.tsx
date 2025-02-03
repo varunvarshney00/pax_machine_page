@@ -8,8 +8,8 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginHorizontal: 40,
-        marginVertical: 24,
+        marginHorizontal: 20,
+        marginVertical: 12,
     },
     title: {
         color: '#ffffff',

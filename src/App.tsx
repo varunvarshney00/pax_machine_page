@@ -28,7 +28,7 @@ function App(): JSX.Element {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='SplashScreen'>
+      <Stack.Navigator initialRouteName='BottomTabNavigator'>
 
 
         <Stack.Screen options={{ headerShown: false }} name="SplashScreen" component={SplashScreen} />

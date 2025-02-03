@@ -13,7 +13,7 @@ const Images = {
 
     backgroundImg: require('../assets/Images/background.png'),
     img: require('../assets/Images/image1.png'),
-    splashScreen:require('../assets/Images/imagee.png'),
+    splashScreen: require('../assets/Images/imagee.png'),
 };
 
 const Icons = {
@@ -26,5 +26,8 @@ const Icons = {
     splashLogo: require('./icons/splashLogo.png'),
     sonnyLogo: require('./icons/sonnyLogo.png'),
     dollar: require('./icons/dollar.png'),
+    SelectCustomer: require('./icons/SelectCustomer.png'),
+    SearchWithColor: require('./icons/SearchWithColor.png'),
+    Scan: require('./icons/Scan.png'),
 };
 export { Images, Icons };
