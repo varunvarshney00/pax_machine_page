@@ -5,24 +5,24 @@ export const styles = StyleSheet.create({
         backgroundColor: '#0e1f2c',
         marginHorizontal: 24.5,
         borderRadius: 14.18,
-        padding: 20,
+        padding: 10,
         borderColor: '#307184',
         borderWidth: 1,
-        marginBottom: 28
+       
     },
     headerContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 16,
+        gap: 7.62,
     },
     avatar: {
-        width: 58,
-        height: 58,
+        width: 14,
+        height: 14,
     },
     nameText: {
         color: 'white',
         fontFamily: 'Montserrat-SemiBold',
-        fontSize: 28,
+        fontSize: 14,
     },
     infoContainer: {
         backgroundColor: '#102c41',
@@ -37,33 +37,35 @@ export const styles = StyleSheet.create({
     },
     infoLabel: {
         color: '#aBB3BA',
-        fontSize: 20,
+        fontSize: 11,
         fontFamily: 'Montserrat-Regular',
-        lineHeight: 26,
+        lineHeight: 14.3,
     },
     infoValue: {
         color: 'white',
-        fontSize: 20,
+        fontSize: 11,
         fontFamily: 'Montserrat-Regular',
-        lineHeight: 26,
+        lineHeight: 14.3,
     },
     infoSectionLeft: {
-        padding: 16,
-        width: 180,
-        gap: 10,
+        padding: 10,
+        // width: 85.71,
+        gap: 5,
     },
     infoSectionCenter: {
-        padding: 16,
+        padding: 10,
         alignItems: 'center',
-        width: 180,
-        gap: 10,
+
+        // width: 85.71,
+        gap: 5,
 
     },
     infoSectionRight: {
-        padding: 16,
-        alignItems: 'flex-end',
-        width: 174,
-        gap: 10,
+        // padding: 10,
+        alignItems: 'center',
+        justifyContent:'center',
+        // width: 77.14,
+        gap: 5,
     },
     verticalDivider: {
         borderWidth: 1,
@@ -73,7 +75,7 @@ export const styles = StyleSheet.create({
     horizontalDivider: {
         borderWidth: 1,
         borderColor: '#1f4c63',
-        width: 600,
+        width: 400,
         alignSelf: 'center',
     },
 });

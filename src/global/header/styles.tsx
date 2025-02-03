@@ -15,16 +15,16 @@ export const styles = StyleSheet.create({
         color: '#ffffff',
         fontFamily: 'Montserrat-Bold',
         marginBottom: 6,
-        fontSize: 32,
+        fontSize: 16,
     },
     subtitle: {
         color: '#ffffff',
         fontFamily: 'Montserrat-Regular',
-        fontSize: 24,
+        fontSize: 12,
     },
     image: {
-        height: 80,
-        width: 80,
+        height: 20,
+        width: 20,
         resizeMode: 'contain',
     },
 });

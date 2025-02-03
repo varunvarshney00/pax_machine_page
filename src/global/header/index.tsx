@@ -1,7 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { styles } from './styles';
-import { Images } from '../../assets';
+import { Icons} from '../../assets';
 
 type headerProps = {
     title: string;
@@ -17,8 +17,8 @@ const Header: React.FC<headerProps> = ({ title, subtitle }) => {
                     <Text style={styles.subtitle}>{subtitle}</Text>
                 </View>
 
-                <TouchableOpacity>
-                    <Image source={Images.HeaderReloaded} style={styles.image} />
+                <TouchableOpacity style={{backgroundColor:'#53C3DD',borderRadius:5,padding:10}}>
+                    <Image source={Icons.Add} style={styles.image} />
                 </TouchableOpacity>
             </View>
         </View>

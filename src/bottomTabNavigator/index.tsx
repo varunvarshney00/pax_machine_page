@@ -15,18 +15,19 @@ function BottomTabNavigator() {
             headerShown: false,
             tabBarStyle: {
                 backgroundColor: '#102c41',
-                height: 101,
+                height: 70,
                 borderTopWidth: 0,
             },
             tabBarLabelStyle: {
-                fontSize: 20,
+                fontSize: 12,
                 fontFamily: 'Montserrat-Regular',
                 // color: 'red',
-                lineHeight: 26.35,
-                marginTop: 14,
+                lineHeight: 20,
+                marginTop: 7.5,
+                marginBottom:15
             },
             tabBarIconStyle: {
-                marginTop: 14
+                marginTop: 15
             },
 
             tabBarIcon: ({ focused }) => {
@@ -59,8 +60,8 @@ function BottomTabNavigator() {
                     <Image
                         source={iconSource}
                         style={{
-                            width: 32,
-                            height: 32,
+                            width: 16,
+                            height: 16,
                             resizeMode: 'contain',
                             tintColor: focused ? '#53c3dd' : 'white'
                         }}

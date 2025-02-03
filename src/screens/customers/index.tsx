@@ -14,7 +14,7 @@ const Customers = () => {
                 <Header title={'Customers Management'} subtitle={'120 Customers'} />
             </View>
 
-            <View style={styles.searchContainer}>
+            {/* <View style={styles.searchContainer}>
                 <CustomInput
                     leftIcon={<Image source={Images.Search} style={styles.searchIcon} />}
                     containerStyle={styles.inputcolor}
@@ -22,28 +22,30 @@ const Customers = () => {
                     placeholderTextColor={'#abb3ba'}
                 />
                 <Image source={Images.Filter} style={styles.filterIcon} />
-            </View>
+            </View> */}
+           
 
-            <View>
+            <View  style={styles.cardContainer}>
                 <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
             </View>
 
             {/* another card */}
-            <View>
+            <View  style={styles.cardContainer}>
                 <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
             </View>
 
-            <View>
+            <View  style={styles.cardContainer}>
                 <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
             </View>
 
-            <View>
+            <View  style={styles.cardContainer}>
                 <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
             </View>
 
-            <View>
+            <View  style={styles.cardContainer}>
                 <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
             </View>
+       
         </ScrollView>
     );
 };

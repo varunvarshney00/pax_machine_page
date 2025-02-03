@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({ Name, ID, LoyaltyPoints, LoyaltyNo, Members
         <View style={styles.infoRow}>
 
           <View style={styles.infoSectionLeft}>
-            <Text style={styles.infoLabel}>ID</Text>
+            <Text style={styles.infoLabel}>License Plate</Text>
             <Text style={styles.infoValue}>{ID}</Text>
           </View>
           <View style={styles.verticalDivider} />

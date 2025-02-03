@@ -29,5 +29,6 @@ const Icons = {
     SelectCustomer: require('./icons/SelectCustomer.png'),
     SearchWithColor: require('./icons/SearchWithColor.png'),
     Scan: require('./icons/Scan.png'),
+    Add: require('./icons/Add.png'),
 };
 export { Images, Icons };

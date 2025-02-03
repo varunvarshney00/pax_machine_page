@@ -21,8 +21,8 @@ export const styles = StyleSheet.create({
         marginBottom: 32
     },
     filterIcon: {
-        width: 76,
-        height: 76,
+        width: 20,
+        height: 20,
         resizeMode: 'contain',
         marginTop: 32,
     },
@@ -31,4 +31,8 @@ export const styles = StyleSheet.create({
         width: 24,
         resizeMode: 'contain',
     },
+    cardContainer:{
+        marginTop:20,
+       
+    }
 });
