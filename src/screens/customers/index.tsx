@@ -1,49 +1,90 @@
-// Customers.tsx
-import { Image, ScrollView, View } from 'react-native';
-import React from 'react';
+
+import {  ScrollView, View } from 'react-native';
+import React, { useState } from 'react';
 import Header from '../../global/header';
 import { styles } from './styles';
-import CustomInput from '../../global/search';
-import { Images } from '../../assets';
-import Card from '../../global/card';
+import CustomInput from '../../global/InputField2';
+import { Icons } from '../../assets';
+import CustomButton from '../../global/button';
+import { useNavigation } from '@react-navigation/native';
 
 const Customers = () => {
+    const navigation= useNavigation();
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [phone,setPhone] =useState('');
+    const [customerNo,setCustomerNo] =useState('');
+    const [loyality,setLoyalityNo] =useState('');
     return (
+      
         <ScrollView style={styles.container}>
             <View>
                 <Header title={'Customers Management'} subtitle={'120 Customers'} />
             </View>
 
-            {/* <View style={styles.searchContainer}>
-                <CustomInput
-                    leftIcon={<Image source={Images.Search} style={styles.searchIcon} />}
-                    containerStyle={styles.inputcolor}
-                    placeholder="Search"
-                    placeholderTextColor={'#abb3ba'}
-                />
-                <Image source={Images.Filter} style={styles.filterIcon} />
-            </View> */}
+           <View style={styles.inputValues} >
+           <View style={styles.inputConatiner}>
+           <CustomInput
+              label="First Name"
+              icon1={Icons.account}
+              icon2={Icons.Cross}
+              value={firstName}
+            onChangeText={setFirstName}
+             
+            />
+           </View>
+           <View style={styles.inputConatiner}>
+           <CustomInput
+            label="Last Name"
+            icon1={Icons.account}
+            value={lastName}
+            onChangeText={setLastName}
+            icon2={Icons.Cross} 
+          />
+           </View>
            
+           <View style={styles.inputConatiner}>
 
-            <View  style={styles.cardContainer}>
-                <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
-            </View>
+             <CustomInput
+              label="Phone Number"
+              icon1={Icons.Phone}
+              keyboardType='numeric'
+              value={phone}
+              onChangeText={setPhone}
+              icon2={Icons.Cross} 
+              
+            />
+           </View>
+           <View style={styles.inputConatiner}>
 
-            {/* another card */}
-            <View  style={styles.cardContainer}>
-                <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
-            </View>
+             <CustomInput
+              label="Loyality Number"
+              icon1={Icons.Trophy}
+              icon2={Icons.Cross}
+              value={loyality}
+              onChangeText={setLoyalityNo}
+              
+            />
+           </View>
+           <View style={styles.inputConatiner}>
 
-            <View  style={styles.cardContainer}>
-                <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
-            </View>
+             <CustomInput
+              label="Customer Number"
+              icon1={Icons.CustomerNo}  
+              value={customerNo}
+              onChangeText={setCustomerNo}
+              icon2={Icons.Cross} 
+              keyboardType='numeric'
 
-            <View  style={styles.cardContainer}>
-                <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
-            </View>
-
-            <View  style={styles.cardContainer}>
-                <Card Name={'John Serrano'} ID={562030214338} LoyaltyPoints={22} LoyaltyNo={22030214338} Membership={'Yes'} Vehicle={'QUVIO23'} LastVisit={'12/11/2024'} />
+            />
+           </View>
+            
+        <View style={styles.buttonWrap}>
+        <CustomButton onPress={()=>navigation.navigate('Listing')} text='Search'/>
+        </View>
+       
+           
+            
             </View>
        
         </ScrollView>

@@ -24,7 +24,13 @@ export const styles = StyleSheet.create({
         fontSize: 12,
     },
     button: {
-        marginVertical: 40,
-        marginHorizontal: 30,
+        marginTop: 36,
+        marginLeft: 23,
+        marginRight:25,
     },
+    inputWrap:{
+        paddingLeft:23,
+        paddingRight:25,
+         paddingTop:28,
+     }
 });

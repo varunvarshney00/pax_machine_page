@@ -86,16 +86,19 @@ const StartShift = () => {
               <Text style={styles.text2}>Enter User ID and password</Text>
             </View>
 
-          
-            <CustomInput
+          <View style={styles.inputWrap}>
+          <CustomInput
               label="User ID"
               icon1={Icons.account}
               value={email}
               onChangeText={setEmail}
               keyboardType="numeric"  
             />
+          </View>
+           
 
-        
+          <View style={styles.inputWrap}>
+
             <CustomInput
               label="Password"
               secureTextEntry={!showPassword} 
@@ -108,6 +111,7 @@ const StartShift = () => {
               error={passwordError}
               onPressIcon={togglePasswordVisibility}  
             />
+          </View>
 
             <CustomButton
               text="Login"

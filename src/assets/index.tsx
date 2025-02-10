@@ -14,6 +14,8 @@ const Images = {
     backgroundImg: require('../assets/Images/background.png'),
     img: require('../assets/Images/image1.png'),
     splashScreen: require('../assets/Images/imagee.png'),
+    noSaleFound: require('../assets/Images/noSaleFound.png'),
+    quivioImage: require('../assets/Images/quivioImage.png')
 };
 
 const Icons = {
@@ -30,5 +32,14 @@ const Icons = {
     SearchWithColor: require('./icons/SearchWithColor.png'),
     Scan: require('./icons/Scan.png'),
     Add: require('./icons/Add.png'),
+    BackArrow: require('./icons/Back.png'),
+    Detail: require('./icons/Detail.png'),
+    cartBlue: require('./icons/cartBlue.png'),
+    arrowRight: require('./icons/arrowRight.png'),
+    closeModal: require('./icons/closeModal.png'),
+    Phone: require('./icons/Phone.png'),
+    Trophy: require('./icons/Trophy.png'),
+    CustomerNo: require('./icons/CustomerNumber.png'),
+    Cross: require('./icons/Cross.png'),
 };
 export { Images, Icons };

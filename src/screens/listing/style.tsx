@@ -34,18 +34,5 @@ export const styles = StyleSheet.create({
     cardContainer:{
        marginBottom:12,
        
-    },
-    inputConatiner:{
-        backgroundColor:"#102C41",
-        marginHorizontal:22,
-        borderRadius:12,
-        paddingVertical:8,
-        paddingHorizontal:10,
-        marginTop:16,
-       
-    },
-    inputValues:{
-        marginTop:4
-    },
-    buttonWrap:{marginHorizontal:22,marginVertical:20,}
+    }
 });

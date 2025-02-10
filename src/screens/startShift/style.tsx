@@ -27,4 +27,8 @@ export const styles = StyleSheet.create({
         marginVertical: 40,
         marginHorizontal: 30,
     },
+    inputWrap:{
+       paddingHorizontal:24,
+        paddingTop:28,
+    }
 });

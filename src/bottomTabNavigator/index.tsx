@@ -1,11 +1,12 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Customers from '../screens/customers';
 import Main from '../screens/main';
 import Transactions from '../screens/transactions';
 import Vehicles from '../screens/vehicles';
 import More from '../screens/more';
 import { Images } from '../assets';
 import { Image } from 'react-native';
+
+import CustomNavigator from './customerNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,16 +17,26 @@ function BottomTabNavigator() {
             tabBarStyle: {
                 backgroundColor: '#102c41',
                 height: 70,
-                borderTopWidth: 0,
+                // width: 360
+
             },
+            tabBarLabelPosition: 'below-icon',
+            tabBarHideOnKeyboard: true,
             tabBarLabelStyle: {
                 fontSize: 12,
-                fontFamily: 'Montserrat-Regular',
-                // color: 'red',
+                fontFamily: 'Montserrat-Bold',
                 lineHeight: 20,
-                marginTop: 7.5,
-                marginBottom:15
+                marginTop: 4,
+                marginBottom: 15,
+
             },
+            tabBarItemStyle: {
+                // borderWidth: 1,
+                // borderColor: "red",
+
+            },
+
+
             tabBarIconStyle: {
                 marginTop: 15
             },
@@ -44,6 +55,7 @@ function BottomTabNavigator() {
                     case 'Customers':
                         iconSource = Images.Customers
                         break;
+
 
                     case 'Vehicles':
                         iconSource = Images.Vehicles
@@ -67,7 +79,6 @@ function BottomTabNavigator() {
                         }}
                     />
                 );
-
             },
             tabBarActiveTintColor: '#53c3dd',
             tabBarInactiveTintColor: 'white',
@@ -75,9 +86,10 @@ function BottomTabNavigator() {
         })}>
             <Tab.Screen name="Main" component={Main} />
             <Tab.Screen name="Transactions" component={Transactions} />
-            <Tab.Screen name="Customers" component={Customers} />
+            <Tab.Screen name="Customers" component={CustomNavigator} />
             <Tab.Screen name="Vehicles" component={Vehicles} />
             <Tab.Screen name="More" component={More} />
+
         </Tab.Navigator>
     );
 }

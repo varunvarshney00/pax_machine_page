@@ -86,7 +86,8 @@ const Login = () => {
               <Text style={styles.text2}>Enter User ID and password</Text>
             </View>
 
-          
+           <View style={styles.inputWrap}>
+
             <CustomInput
               label="User ID"
               icon1={Icons.account}
@@ -94,8 +95,10 @@ const Login = () => {
               onChangeText={setEmail}
               keyboardType="numeric"  
             />
+           </View>
 
-        
+        <View style={styles.inputWrap}>
+
             <CustomInput
               label="Password"
               secureTextEntry={!showPassword} 
@@ -108,12 +111,14 @@ const Login = () => {
               error={passwordError}
               onPressIcon={togglePasswordVisibility}  
             />
+        </View>
 
             <CustomButton
               text="Login"
               style={{
                 marginTop: 36,
-                marginHorizontal: 24,
+                marginLeft: 23,
+                marginRight:25,
                 opacity: disable ? 0.8 : 1,
               }}
               onPress={handleLogin}

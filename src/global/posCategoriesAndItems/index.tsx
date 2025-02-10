@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, ScrollView, FlatList } from 'react-native'
+import { View, Text, StyleSheet, Image, FlatList } from 'react-native'
 import React from 'react'
 import { Icons } from '../../assets'
 
@@ -43,6 +43,7 @@ const PosCategoriesAndItems = (props: Props) => {
                     numColumns={3}
                     showsVerticalScrollIndicator
                 />
+
             </View>
         </View>
     )
@@ -92,11 +93,13 @@ const styles = StyleSheet.create({
     },
     card: {
         borderColor: '#8AD6E8',
+        // borderBottomColor: 'yellow',
         width: 90.48,
         height: 78,
         borderRadius: 8,
         backgroundColor: '#102c41',
-        borderBottomWidth: .95,
+        borderBottomWidth: 0.95,
+        // borderBottomWidth: 5,
         justifyContent: 'center',
         marginRight: 7.9,
         marginBottom: 16

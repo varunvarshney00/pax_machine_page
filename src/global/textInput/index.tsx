@@ -48,6 +48,8 @@ const CustomInput: React.FC<CustomInputProps> = ({
     // Keyboard.dismiss();
   };
 
+
+  
   return (
 
     <View style={styles.inputContainer}>
@@ -64,7 +66,6 @@ const CustomInput: React.FC<CustomInputProps> = ({
         </Text>}
         value={value}
         secureTextEntry={secureTextEntry}
-
         onChangeText={onChangeText}
         onFocus={handleFocus}
         onBlur={handleBlur}
@@ -72,6 +73,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
           icon2 && (
             <TextInput.Icon
             onPress={togglePasswordVisibility}
+           
               icon={() => (
                 <Image
                   source={showPassword?icon2:icon3}
@@ -84,6 +86,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
         left={
           icon1 && (
             <TextInput.Icon
+            
               icon={() => (
                 <Image
                   source={icon1}

@@ -27,4 +27,21 @@ export const styles = StyleSheet.create({
         width: 20,
         resizeMode: 'contain',
     },
+    arrow:{width:13.33,height:10},
+    main:{
+        flexDirection:"row",
+        gap:11.87,
+        justifyContent:'center',
+        alignItems:'center'
+    },
+
+    arrowContainer:{
+        backgroundColor:'#15374D',
+        borderRadius:5,
+        alignItems:'center',
+        justifyContent:'center',
+        paddingVertical:9.23,
+        paddingHorizontal:7.57,
+        borderColor:'#53C3DD80',
+        borderWidth:1}
 });

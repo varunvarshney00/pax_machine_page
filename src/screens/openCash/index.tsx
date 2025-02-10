@@ -63,7 +63,8 @@ const OpenCash = () => {
               <Text style={styles.text2}>Start Cash Amount in Drawer</Text>
             </View>
 
-           
+           <View style={styles.inputWrap}>
+
             <CustomInput
               label="Enter Cash Amount"
               icon1={Icons.dollar}
@@ -71,8 +72,10 @@ const OpenCash = () => {
               keyboardType="numeric" 
               onChangeText={(text) => setCashAmount(text)} 
             />
+           </View>
 
-       
+            
+
             <CustomButton
               text="Confirm"
               style={{
@@ -83,6 +86,8 @@ const OpenCash = () => {
               onPress={handleConfirm}
               disable={disable}  
             />
+       
+           
 
           </KeyboardAwareScrollView>
           <CustomToast msg={toastMessage} icon={toastIcon} visible={toastVisible} />
