@@ -2,6 +2,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { Icons, Images } from '../../assets';
 import { styles } from './styles';
+import {vh,vw} from '../../utils/scaling'
 
 type CardProps = {
   Name: string;
@@ -64,14 +65,14 @@ const Card: React.FC<CardProps> = ({ Name, LicensePlate, LastVisit,CustomerNo, P
           <View style={styles.verticalDivider} />
 
           <View style={styles.infoSectionCenter}>
-            <Text style={[styles.infoLabel, {textAlign:'center',width:100}]}>Loyality Number</Text>
+            <Text style={[styles.infoLabel, {textAlign:'center',width:vw(100)}]}>Loyality Number</Text>
             <Text style={styles.infoValue}>{LoyalityNumber}</Text>
           </View>
 
           <View style={styles.verticalDivider} />
 
           <View style={styles.infoSectionRight}>
-            <Text style={[[styles.infoLabel, {width:100}]]}>Loyality Points</Text>
+            <Text style={[[styles.infoLabel, {width:vw(100)}]]}>Loyality Points</Text>
             <Text style={[styles.infoValue, {textAlign:'right'}]}>{LoyalityPoints}</Text>
           </View>
 

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-
+import {vh,vw} from '../../utils/scaling'
 export const styles = StyleSheet.create({
     container: {
         backgroundColor: '#102c41',
@@ -8,13 +8,13 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginHorizontal: 20,
-        marginVertical: 12,
+        marginHorizontal: vw(20),
+        marginVertical: vh(12),
     },
     title: {
         color: '#ffffff',
         fontFamily: 'Montserrat-Bold',
-        marginBottom: 6,
+        marginBottom: vh(6),
         fontSize: 16,
     },
     subtitle: {
@@ -23,14 +23,16 @@ export const styles = StyleSheet.create({
         fontSize: 12,
     },
     image: {
-        height: 20,
-        width: 20,
+        height: vh(20),
+        width: vw(20),
         resizeMode: 'contain',
     },
-    arrow:{width:13.33,height:10},
+    arrow:{
+        width:vw(13.33),
+        height:vh(10)},
     main:{
         flexDirection:"row",
-        gap:11.87,
+        gap:vw(11.87),
         justifyContent:'center',
         alignItems:'center'
     },
@@ -40,8 +42,8 @@ export const styles = StyleSheet.create({
         borderRadius:5,
         alignItems:'center',
         justifyContent:'center',
-        paddingVertical:9.23,
-        paddingHorizontal:7.57,
+        paddingVertical:vh(9.23),
+        paddingHorizontal:vw(7.57),
         borderColor:'#53C3DD80',
         borderWidth:1}
 });

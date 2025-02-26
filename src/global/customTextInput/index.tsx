@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Image, StyleSheet, View, TextInput, Animated } from 'react-native';
 import { Icons } from '../../assets';
+import {vh,vw} from '../../utils/scaling'
 
 const CustomTextInput = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -10,7 +11,7 @@ const CustomTextInput = () => {
   const handleFocus = () => {
     setIsFocused(true);
     Animated.timing(placeholderTop, {
-      toValue: -20, 
+      toValue: vh(-20), 
       duration: 100,
       useNativeDriver: false,
     }).start();
@@ -51,8 +52,8 @@ const CustomTextInput = () => {
           style={[
             styles.textInput,
             {
-              paddingTop: isFocused ? 12 : 0,
-              paddingBottom:isFocused?-13:0,
+              paddingTop: isFocused ? vh(12) : 0,
+              paddingBottom:isFocused?vh(-13):0,
               fontSize:20,
               color: 'white',
               fontWeight: 'bold',
@@ -82,41 +83,41 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 10,
-    paddingVertical:10
+    paddingHorizontal: vw(10),
+    paddingVertical:vh(10)
  
   },
   left: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 10,
+    gap: vw(10),
   },
   right: {
     justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
-    width: 30,
-    height: 30,
+    width: vw(30),
+    height: vh(30),
     resizeMode: 'contain',
   },
   inputContainer: {
     flex: 1,
     position: 'relative',
-    marginLeft: 10,
+    marginLeft: vw(10),
   },
   placeholder: {
     position: 'absolute',
-    left: 9,
+    left: vw(9),
     color: 'white',
     fontWeight: 'bold',
-    top: 12,
+    top: vh(12),
    
   },
   textInput: {
-    height: 60,  
-    paddingHorizontal: 10,
+    height: vh(60),  
+    paddingHorizontal: vw(10),
    justifyContent:'center',
    alignItems:'center'
    

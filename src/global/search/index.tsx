@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, { useState } from 'react';
 import { TextInput, TouchableOpacity, View, Text } from 'react-native';
 import { InputProps } from './@types';
@@ -36,6 +37,7 @@ const CustomInput: React.FC<
                 <View
                     style={[
                         styles.inputContainer,
+                        // eslint-disable-next-line react-native/no-inline-styles
                         {
                             borderColor: error
                                 ? colors.ERROR_COLOUR

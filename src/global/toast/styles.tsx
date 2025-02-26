@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import {vh,vw} from '../../utils/scaling'
 
 export const styles = StyleSheet.create({
     toastContainer: {
@@ -6,21 +7,21 @@ export const styles = StyleSheet.create({
       zIndex: 1000,
       backgroundColor:'#CA392F',
       width:"100%",
-      paddingVertical:19,
+      paddingVertical:vh(19),
       alignItems: 'center',
       justifyContent: 'center',
     },
     toastMessage: {
       flexDirection: 'row',
-      gap:6,
+      gap:vw(6),
       borderRadius: 10,
       alignItems: 'center',
       justifyContent: 'center',
   
     },
     icon: {
-      width: 22,
-      height:22,
+      width: vw(22),
+      height:vh(22),
     
     },
     message: {

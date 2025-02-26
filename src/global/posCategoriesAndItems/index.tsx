@@ -1,11 +1,13 @@
+/* eslint-disable quotes */
 import { View, Text, StyleSheet, Image, FlatList } from 'react-native'
 import React from 'react'
-import { Icons } from '../../assets'
+import { Icons } from '../../assets';
+import {vh,vw} from '../../utils/scaling'
 
 type Props = {}
 
 const data = [
-    { id: "1", title: "Promotion" },
+    { id: "1", title: 'Promotion' },
     { id: "2", title: "Unlimited Plan" },
     { id: "3", title: "Washes" },
     { id: "4", title: "Merchandise" },
@@ -51,8 +53,8 @@ const PosCategoriesAndItems = (props: Props) => {
 
 const styles = StyleSheet.create({
     container: {
-        width: 320,
-        height: 240.44,
+        width: vw(320),
+        height: vh(240.44),
         borderWidth: .12,
         backgroundColor: '#0e1f2c',
         alignSelf: "center",
@@ -61,14 +63,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     subcontainer: {
-        width: 300,
-        height: 216.44,
+        width: vw(300),
+        height: vh(216.44),
         alignSelf: 'center',
     },
     postext: {
         color: '#ffffff',
         fontSize: 14,
-        width: 227.68,
+        width: vw(227.68),
         fontFamily: 'Montserrat-SemiBold'
     },
     header: {
@@ -77,40 +79,40 @@ const styles = StyleSheet.create({
     },
     twoicons: {
         flexDirection: 'row',
-        gap: 10.67
+        gap: vw(10.67)
     },
     iconimage: {
-        width: 28.44,
-        height: 28.44,
+        width: vw(28.44),
+        height: vw(28.44),
         resizeMode: 'contain'
     },
     bodycontainer: {
-        width: 300,
-        height: 172,
-        marginTop: 16,
+        width: vw(300),
+        height: vh(172),
+        marginTop: vh(16),
         // flexDirection: 'row',
         // gap: 7.9,
     },
     card: {
         borderColor: '#8AD6E8',
         // borderBottomColor: 'yellow',
-        width: 90.48,
-        height: 78,
+        width: vw(90.48),
+        height: vh(78),
         borderRadius: 8,
         backgroundColor: '#102c41',
         borderBottomWidth: 0.95,
         // borderBottomWidth: 5,
         justifyContent: 'center',
-        marginRight: 7.9,
-        marginBottom: 16
+        marginRight: vw(7.9),
+        marginBottom: vh(16)
     },
     cardtext: {
         color: '#ffffff',
         fontSize: 12,
-        width: 67,
+        width: vw(67),
         fontFamily: 'Montserrat-SemiBold',
         alignSelf: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
     }
 })
 

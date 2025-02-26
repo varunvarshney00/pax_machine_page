@@ -83,8 +83,9 @@ const Customers = () => {
         <CustomButton onPress={()=>navigation.navigate('Listing')} text='Search'/>
         </View>
        
+         
            
-            
+
             </View>
        
         </ScrollView>

@@ -1,17 +1,17 @@
 import { StyleSheet } from "react-native"
-
+import {vh,vw} from '../../utils/scaling'
 export const styles = StyleSheet.create({
    
     container:{
-    paddingTop:71.25,
-    paddingLeft:24,
+    paddingTop:vh(71.25),
+    paddingLeft:vw(24),
     },
     logoContainer:{
-    paddingBottom:15,
+    paddingBottom:vh(15),
     },
     logo: {
-        width: 73,
-        height: 50,
+        width: vw(73),
+        height: vh(50),
         resizeMode: 'contain',
         
      

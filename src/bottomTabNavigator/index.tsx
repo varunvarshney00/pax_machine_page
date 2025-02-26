@@ -1,3 +1,7 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react-native/no-inline-styles */
+ 
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Main from '../screens/main';
 import Transactions from '../screens/transactions';
@@ -5,7 +9,7 @@ import Vehicles from '../screens/vehicles';
 import More from '../screens/more';
 import { Images } from '../assets';
 import { Image } from 'react-native';
-
+import {vh,vw} from '../utils/scaling'
 import CustomNavigator from './customerNavigator';
 
 const Tab = createBottomTabNavigator();
@@ -16,31 +20,32 @@ function BottomTabNavigator() {
             headerShown: false,
             tabBarStyle: {
                 backgroundColor: '#102c41',
-                height: 70,
-                // width: 360
+                height: vh(70),
+                width: vw(360)
 
             },
             tabBarLabelPosition: 'below-icon',
             tabBarHideOnKeyboard: true,
             tabBarLabelStyle: {
-                fontSize: 12,
+                fontSize: vw(12),
                 fontFamily: 'Montserrat-Bold',
-                lineHeight: 20,
-                marginTop: 4,
-                marginBottom: 15,
-
+                lineHeight: vh(20),
+                marginTop: vh(4),
+                marginBottom: vh(15),
+                width: route.name === 'Main' && 'More' ? vw(31) : vw(77), 
+                textAlign: 'center',
             },
             tabBarItemStyle: {
                 // borderWidth: 1,
                 // borderColor: "red",
+                // backgroundColor:'green',
 
             },
-
-
             tabBarIconStyle: {
-                marginTop: 15
+                marginTop: vh(15)
             },
-
+     
+            // eslint-disable-next-line react/no-unstable-nested-components
             tabBarIcon: ({ focused }) => {
                 let iconSource;
                 switch (route.name) {
@@ -62,18 +67,19 @@ function BottomTabNavigator() {
                         break;
 
                     case 'More':
-                        iconSource = Images.More
+                        iconSource = Images.More;
                         break;
                     default:
                         break;
                 }
 
                 return (
+
                     <Image
                         source={iconSource}
                         style={{
-                            width: 16,
-                            height: 16,
+                            width: vw(16),
+                            height: vh(16),
                             resizeMode: 'contain',
                             tintColor: focused ? '#53c3dd' : 'white'
                         }}

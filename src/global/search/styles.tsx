@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { colors } from '../../utils/constants/colors';
-
+import {vh,vw} from '../../utils/scaling'
 
 const styles = StyleSheet.create({
     inputMainContainer: {
@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
     },
     errorContainer: {
         alignItems: 'center',
-        marginBottom: 3,
-        gap: 5,
+        marginBottom: vh(3),
+        gap: vw(5),
         flexDirection: 'row',
     },
     errorText: {
@@ -23,29 +23,29 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         width: '100%',
-        marginBottom: 2,
+        marginBottom: vh(2),
         flexDirection: 'row',
-        marginLeft: 4,
+        marginLeft: vw(4),
 
     },
     inputContainer: {
         alignItems: 'center',
-        marginTop: 32,
+        marginTop: vh(32),
         justifyContent: 'space-between',
         borderRadius: 10,
-        paddingHorizontal: 20,
+        paddingHorizontal: vw(20),
         flexDirection: 'row',
-        height: 76,
+        height: vh(76),
     },
     img: {
-        width: 20,
-        height: 20,
+        width: vw(20),
+        height: vh(20),
     },
     textInput: {
         fontSize: 13,
         alignItems: 'flex-start',
         width: '100%',
-        paddingHorizontal: 12,
+        paddingHorizontal: vw(12),
         justifyContent: 'center',
         alignSelf: 'center',
         color: 'white'

@@ -1,10 +1,11 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet } from "react-native";
+import {vh,vw} from '../../utils/scaling'
 export const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#2B798E',
-        paddingVertical: 18,
+        paddingVertical: vh(18),
         borderRadius: 10,
 
     },

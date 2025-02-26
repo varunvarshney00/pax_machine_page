@@ -1,4 +1,6 @@
 import { StyleSheet } from "react-native";
+import {vh,vw} from '../../utils/scaling'
+
 export const styles = StyleSheet.create({
     inputContainer: {
       flexDirection: 'row',
@@ -18,8 +20,8 @@ export const styles = StyleSheet.create({
      
     },
     iconStyle: {
-      width: 20,
-      height: 20,
+      width: vw(20),
+      height: vh(20),
       resizeMode: 'contain',
       
   

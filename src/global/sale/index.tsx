@@ -1,7 +1,8 @@
+/* eslint-disable react-native/no-inline-styles */
 import { Image, Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { Icons, Images } from '../../assets'
-
+import {vh,vw} from '../../utils/scaling'
 
 const Sale = () => {
 
@@ -130,39 +131,40 @@ export default Sale
 const styles = StyleSheet.create({
     container: {
         alignSelf: 'center',
-        width: 320,
-        height: 57.14,
+        width: vw(320),
+        height: vh(57.14),
         backgroundColor: '#0e1f2c',
-        marginTop: 16,
+        marginTop: vh(16),
         borderRadius: 8,
         borderWidth: .12,
-        padding: 10,
+        padding: vw(10),
+  
         borderColor: "#307184",
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between'
     },
     cartblue: {
-        height: 24,
-        width: 24,
+        height: vh(24),
+        width: vh(24),
         resizeMode: 'contain',
-        marginRight: 2.8
+        marginRight: vw(2.8)
     },
     rightarrow: {
-        height: 37.14,
-        width: 37.14,
+        height: vh(37.14),
+        width: vw(37.14),
         resizeMode: 'contain'
     },
     subcontainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 8
+        gap: vw(8)
     },
     modalcontainer: {
-        height: 530.6,
+        height: vh(530.6),
         backgroundColor: '#0e1f2c',
-        paddingVertical: 16,
-        paddingHorizontal: 20,
+        paddingVertical: vh(16),
+        paddingHorizontal: vw(20),
         flex: 1,
         position: 'absolute',
         bottom: 0,
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
         color: 'white',
         fontFamily: 'Montserrat-SemiBold',
         fontSize: 16,
-        lineHeight: 22.4,
+        lineHeight: vh(22.4),
         letterSpacing: -.02
     },
     modalHeader: {
@@ -186,13 +188,13 @@ const styles = StyleSheet.create({
         color: '#f04438',
         fontFamily: 'Montserrat-SemiBold',
         fontSize: 12,
-        lineHeight: 15.6,
+        lineHeight: vh(15.6),
         letterSpacing: -.01
     },
     voidsalebox: {
 
-        paddingHorizontal: 32,
-        paddingVertical: 8,
+        paddingHorizontal: vw(32),
+        paddingVertical: vh(8),
         borderRadius: 6,
         borderWidth: 0.5,
            borderColor: '#f04438',
@@ -201,7 +203,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     closeModalContainer: {
-        padding: 10.74,
+        padding: vw(10.74),
         borderRadius: 6.15,
         borderWidth: 0.35,
         borderColor: 'white'
@@ -209,34 +211,34 @@ const styles = StyleSheet.create({
     closemodal: {
         //    height: 10.35,
         //    width: 10.35,
-        height: 20.71,
-        width: 20.71,
+        height: vh(20.71),
+        width: vw(20.71),
         resizeMode: 'contain'
     },
     voidsaleandclose: {
         flexDirection: 'row',
-        gap: 10
+        gap: vw(10)
     },
     tableheader: {
-        height: 42,
+        height: vh(42),
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 16,
+        marginTop: vh(16),
         borderBottomWidth: 0.5,
         borderColor: '#3e4c56'
     },
     tablesub: {
         flexDirection: 'row',
-        gap: 22
+        gap: vw(22)
     },
     nosalefound: {
-        width: 320,
-        height: 149.6,
+        width: vw(320),
+        height: vh(149.6),
         resizeMode: 'contain',
-        marginTop: 32,
+        marginTop: vh(32),
         alignSelf: 'center',
-        marginBottom: 54
+        marginBottom: vh(54)
     },
     amountcontainer: {
         flexDirection: 'row',
@@ -248,26 +250,26 @@ const styles = StyleSheet.create({
         fontFamily: 'Montserrat-Regular',
         color: '#abb3ba',
         fontSize: 14,
-        lineHeight: 19.6,
+        lineHeight: vh(19.6),
         letterSpacing: -.02
     },
     textcontainer: {
         flexDirection: 'row',
-        marginBottom: 12
+        marginBottom: vh(12)
     },
     subsubcontainer: {
-        width: 320,
-        height: 54,
+        width: vw(320),
+        height: vh(54),
         backgroundColor: '#307184',
         alignSelf: 'center',
         borderRadius: 10,
         alignItems: 'center',
-        marginTop: 12,
+        marginTop: vh(12),
         justifyContent: 'center'
     },
     selectcustomer: {
         fontSize: 16,
-        lineHeight: 20.8,
+        lineHeight: vh(20.8),
         letterSpacing: -.01,
         fontFamily: 'Montserrat-SemiBold',
     },
@@ -277,7 +279,7 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Dark semi-transparent backdrop
+        backgroundColor: 'rgba(0, 0, 0, 0.7)', 
     }
 })
 

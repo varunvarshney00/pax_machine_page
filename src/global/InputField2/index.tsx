@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable react/no-unstable-nested-components */
 import React, { useState } from 'react';
 import { View, Image, Text, Keyboard } from 'react-native';
 import { TextInput } from 'react-native-paper';
@@ -9,9 +11,9 @@ interface CustomInputProps {
   onChangeText?: (text: string) => void;
   placeholder?: string;
   secureTextEntry?: boolean;
-  icon1?: any;  
-  icon2?: any;  
-  icon3?: any;  
+  icon1?: any;
+  icon2?: any;
+  icon3?: any;
   error?: boolean;
   keyboardType?: string;
 }
@@ -37,7 +39,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
   const clearText = () => {
     Keyboard.dismiss();
     if (onChangeText) {
-      onChangeText('');  
+      onChangeText('');
     }
   };
 

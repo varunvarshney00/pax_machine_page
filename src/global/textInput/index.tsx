@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Image, Text, Keyboard, } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import { styles } from './styles';
+import {vh,vw} from '../../utils/scaling'
 
 interface CustomInputProps {
   label?: string;

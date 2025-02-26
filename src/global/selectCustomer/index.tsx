@@ -1,6 +1,8 @@
 import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Icons } from '../../assets'
+import {vh,vw} from '../../utils/scaling'
+
 
 type Props = {}
 
@@ -26,35 +28,35 @@ const styles = StyleSheet.create({
     container: {
         borderWidth: .12,
         borderColor: '#307184',
-        height: 81,
-        width: 320,
+        height: vh(81),
+        width: vw(320),
         alignSelf: 'center',
         backgroundColor: '#0E1F2C',
         borderRadius: 7.62,
-        marginTop: 20,
-        marginBottom: 16,
+        marginTop: vh(20),
+        marginBottom: vh(16),
         // justifyContent: 'center',
         alignItems: 'center'
     },
     subcontainer: {
-        width: 300.95,
-        height: 46,
+        width: vw(300.95),
+        height: vh(46),
         backgroundColor: '#53c3dd',
         alignSelf: 'center',
         borderRadius: 7.62,
         alignItems: 'center',
-        marginTop: 25
+        marginTop: vh(25)
     },
     selectcustomer: {
         fontSize: 13,
-        lineHeight: 18.2,
+        lineHeight: vh(18.2),
         letterSpacing: -.02,
         fontFamily: 'Montserrat-SemiBold',
         marginTop: 18,
     },
     image: {
-        width: 40,
-        height: 20, // Half of the width
+        width: vw(40),
+        height: vh(20), // Half of the width
         backgroundColor: "#0E1F2C",
         borderBottomLeftRadius: 50, // Half of width
         borderBottomRightRadius: 50, // Half of width
@@ -65,10 +67,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     icon: {
-        width: 34.05,
-        height: 34.05,
+        width: vw(34.05),
+        height: vh(34.05),
         resizeMode: 'contain',
-        top: -11.5,
-        left: -.5
+        top: vh(-11.5),
+        left: vw(-.5)
     }
 })

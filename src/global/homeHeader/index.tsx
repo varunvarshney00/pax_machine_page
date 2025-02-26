@@ -1,7 +1,7 @@
 import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Icons, Images } from '../../assets'
-
+import {vh,vw} from '../../utils/scaling'
 
 const HomeHeader = () => {
    return (
@@ -28,32 +28,32 @@ export default HomeHeader
 const styles = StyleSheet.create({
    container: {
        width: '100%',
-       height: 60,
+       height: vh(60),
        backgroundColor: '#102c41',
        flexDirection: 'row',
        alignItems: 'center',
-       paddingVertical: 12,
-       paddingHorizontal: 20,
+       paddingVertical: vh(12),
+       paddingHorizontal: vw(20),
        justifyContent: 'space-between'
    },
    avatar: {
-       height: 24,
-       width: 24,
+       height: vh(24),
+       width: vw(24),
        resizeMode: 'contain'
    },
    quivioImage: {
-       width: 57.17,
-       height: 20.13,
+       width: vw(57.17),
+       height: vh(20.13),
        resizeMode: 'contain',
-       marginLeft: 11
+       marginLeft: vw(11)
    },
    leftheader: {
        flexDirection: 'row',
        alignItems: 'center'
    },
    scan: {
-       width: 36,
-       height: 36,
+       width: vw(36),
+       height: vh(36),
        resizeMode: 'contain',
    }
 })

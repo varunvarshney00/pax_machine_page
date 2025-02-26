@@ -2,8 +2,8 @@ import {Dimensions, PixelRatio} from 'react-native';
 export const SCREEN_WIDTH = Dimensions.get('window').width;
 export const SCREEN_HEIGHT = Dimensions.get('window').height;
 
-export const DESIGN_WIDTH = 320;
-export const DESIGN_HEIGHT = 568;
+export const DESIGN_WIDTH = 360;
+export const DESIGN_HEIGHT = 672;
 
 export const vw = (width:number) => {
   const percent = (width / DESIGN_WIDTH) * 100;
